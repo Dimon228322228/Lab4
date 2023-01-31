@@ -1,0 +1,91 @@
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCenter{
+    justify-content: center;
+}
+
+.alignCenter{
+    align-items: center;
+}
+
+.spaceAround{
+    justify-content: space-around;
+}
+
+.marginTop24{
+    margin-top: 24px;
+}
+
+.marginTop16{
+    margin-top: 16px;
+}
+
+.paddingLeft20{
+    padding-left: 20px;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+.childWidth70{
+    width: 70%
+}
+
+.childWidth20{
+    width: 20%
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    border-bottom: #3944ff solid 2px;
+    outline: none;
+}
+
+.input[type="range"]{
+    padding: 6px 0;
+}
+
+.input:not(.input[type="range"]){
+    padding: 10px 20px;
+}
+
+.input:nth-child(n){
+    margin-bottom: 24px;
+}
+
+.input:last-child{
+    margin-bottom: 0;
+}
+
+.textBlue20{
+    font-size: 20px;
+    color: #1c49ff;
+}
+
+.textWhite20{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@keyframes scales {
+    from{ scale: none }
+    to{ scale: 1.2 }
+}
+
+.scalableItem:hover{
+    animation: 0.5s scales forwards;
+}
+
+.input::placeholder{
+    color: #1c49ff;
+}

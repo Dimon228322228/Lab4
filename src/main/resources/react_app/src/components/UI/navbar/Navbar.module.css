@@ -1,0 +1,16 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2684ff;
+    height: 50px;
+    align-items: center;
+}
+
+.svg{
+    color: #1c49ff;
+    width: 48px;
+}
+
+.svg:hover{
+    cursor: pointer;
+}

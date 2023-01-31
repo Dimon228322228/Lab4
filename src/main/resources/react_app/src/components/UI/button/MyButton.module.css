@@ -1,0 +1,11 @@
+.btn{
+    padding: 5px 10px;
+    border: #1c49ff solid 2px;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.wrap{
+    align-content: center;
+    margin: 5px;
+}
