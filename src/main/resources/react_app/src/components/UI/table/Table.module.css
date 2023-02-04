@@ -1,0 +1,82 @@
+.allContent{
+    padding: 10px 0 10px 20px;
+    border: #1c49ff solid 2px;
+    border-radius: 10px;
+}
+
+.timeBlock > *{
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+.timeBlock > *:last-child{
+    margin-right: 0;
+}
+
+.mainContent{
+    align-items: baseline;
+}
+
+.mainContent > *{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.mainContent > *:last-child{
+    margin-right: 0;
+}
+
+.mainContent p:first-child{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.wrapHeader{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.wrapHeader > p{
+    font-weight: 500;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.table > *{
+    margin-bottom: 10px;
+}
+
+.table{
+    overflow-y: scroll;
+    height: 350px;
+    padding: 0 4px;
+}
+
+ /* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 6px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #79daff;
+    scrollbar-arrow-color: #1c49ff;
+}
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #1c49ff;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #2684ff;;
+}
+
+/* Стрелки */
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-color: #79daff;
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-color: #79daff;
+}
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background-color: #79daff;
+}
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background-color: #79daff;
+}

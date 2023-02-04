@@ -1,0 +1,8 @@
+.canvas{
+    border: #1c49ff solid 2px;
+    border-radius: 10px;
+}
+
+.canvasTip{
+    position: absolute;
+}

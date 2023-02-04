@@ -28,6 +28,10 @@
     margin-top: 16px;
 }
 
+.marginBottom10{
+    margin-bottom: 10px;
+}
+
 .paddingLeft20{
     padding-left: 20px;
 }
@@ -52,14 +56,14 @@
 }
 
 .input[type="range"]{
-    padding: 6px 0;
+    padding: 6px 0 0 0;
 }
 
-.input:not(.input[type="range"]){
+.input:not(div input[type="range"]){
     padding: 10px 20px;
 }
 
-.input:nth-child(n){
+.input:nth-child(n):not(input[type="range"]){
     margin-bottom: 24px;
 }
 
@@ -79,13 +83,21 @@
 
 @keyframes scales {
     from{ scale: none }
-    to{ scale: 1.2 }
+    to{ scale: 1.1 }
 }
 
 .scalableItem:hover{
-    animation: 0.5s scales forwards;
+    animation: 1s scales forwards;
 }
 
 .input::placeholder{
     color: #1c49ff;
+}
+
+.graph{
+    margin: 0 30px 10px;
+}
+
+.alignBaseLine{
+    align-items: baseline;
 }
