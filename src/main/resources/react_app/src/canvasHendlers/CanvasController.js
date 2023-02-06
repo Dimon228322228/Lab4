@@ -34,8 +34,8 @@ export class CanvasController{
     }
 
     redraw_canvas = table => {
-        this._canvasView.clear();
-        table.forEach(item => { this._canvasView.addPoint(item) });
+        this.canvasView.clear();
+        table.forEach(item => { this.canvasView.addPoint(item) });
     }
 
     set canvasView ( canvasView ){
@@ -46,4 +46,4 @@ export class CanvasController{
         return this._canvasView;
     }
 }
-const getPosition = ( e ) => { return new Vector( e.offsetX, e.offsetY ); }
+const getPosition = e => { return new Vector( e.nativeEvent.offsetX, e.nativeEvent.offsetY ); }

@@ -1,9 +1,11 @@
 import {RequestHandler} from "./RequestHandler";
+import {store} from "../store";
+import {addElementsAction, updateTableAction} from "../store/TableReducer";
 
 export class InputModel{
-    constructor( r ) {
-        this._r = r;
-        this._table = [];
+    constructor( ) {
+        this._table = store.getState().tableReducer.table;
+        this._r = store.getState().rReducer.radius;
     }
 
     get table() {
@@ -13,11 +15,14 @@ export class InputModel{
     get r(){
         return this._r;
     }
-    requestData( vector, r, callback ){
+    requestData( vector, callback ){
         const requestMap = new Map();
         requestMap.set("x", vector.x);
         requestMap.set("y", vector.y);
-        requestMap.set("r", r);
-        callback( RequestHandler.getData( requestMap ) );
+        requestMap.set("r", this._r);
+        RequestHandler.getData( requestMap )
+            .then(resp => callback( resp ))
+            .catch(reason => console.log(reason))
+            .then(repl => repl ? store.dispatch(addElementsAction(repl)) : store.dispatch(updateTableAction(this._table)));
     }
 }

@@ -1,6 +1,10 @@
 .gradle
 build/
 src/main/resources/db.properties
+src/main/resources/static/main.240ae377eeb4217bc93b.css
+src/main/resources/static/main.240ae377eeb4217bc93b.css.map
+src/main/resources/static/main.js
+src/main/resources/static/main.js.map
 
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/

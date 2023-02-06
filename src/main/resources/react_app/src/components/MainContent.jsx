@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from "./MainContent.module.css";
-import Presentation from "./Presentation";
-import Canvas from "./UI/canvas/Canvas";
-import InputsPanel from "./InputsPanel";
-import Table from "./UI/table/Table";
+import Presentation from "./Presentation.jsx";
+import Canvas from "./UI/canvas/Canvas.jsx";
+import InputsPanel from "./InputsPanel.jsx";
+import Table from "./UI/table/Table.jsx";
 
 const MainContent = () => {
     return (

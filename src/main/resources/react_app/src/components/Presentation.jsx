@@ -1,5 +1,5 @@
 import React from 'react';
-import OutputItem from "./UI/outputItem/OutputItem";
+import OutputItem from "./UI/outputItem/OutputItem.jsx";
 
 const Presentation = ({group, name, variant, ...props}) => {
     return (

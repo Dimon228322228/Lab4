@@ -5,26 +5,22 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.Duration;
 import java.time.Instant;
 
-@Entity
-@Table(name = "shot-results")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
+@Embeddable
 public class ShotResult {
-    @Setter
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     private boolean res;
     private String message;
     private Duration executionTime;
 
     public static ShotResult create(boolean res, String message, Instant startTime) {
-        return new ShotResult(null,res,message,getDiff(startTime));
+        return new ShotResult(res,message,getDiff(startTime));
     }
 
     private static Duration getDiff(Instant start) {
@@ -35,7 +31,6 @@ public class ShotResult {
     @Override
     public String toString() {
         return "ShotResult{" +
-                "id=" + id +
                 ", res=" + res +
                 ", message='" + message + '\'' +
                 ", executionTime=" + executionTime +

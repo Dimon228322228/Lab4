@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./Table.module.css";
 import classes1 from "../../MainContent.module.css"
-import TableItem from "./TableItem";
+import TableItem from "./TableItem.jsx";
 
 const Table = () => {
     return (

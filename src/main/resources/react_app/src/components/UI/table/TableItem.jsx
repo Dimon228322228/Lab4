@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./Table.module.css";
 import classes1 from "../../MainContent.module.css";
-import MyButton from "../button/MyButton";
+import MyButton from "../button/MyButton.jsx";
 
 const TableItem = ({numberOfShot, isShoot, x, y, r, executeTime, currentTime, ...props}) => {
     return (

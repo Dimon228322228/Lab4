@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./Navbar.module.css";
-import MyButton from "../button/MyButton";
+import MyButton from "../button/MyButton.jsx";
 import classes1 from "../../MainContent.module.css";
 
 const Navbar = ({children, ...props}) => {
