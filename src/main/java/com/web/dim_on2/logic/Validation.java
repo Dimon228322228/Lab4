@@ -1,8 +1,11 @@
 package com.web.dim_on2.logic;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class Validation {
     private final Graph graph;
     public Validation(){

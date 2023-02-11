@@ -15,4 +15,6 @@ public interface UserHitResultRepository extends PagingAndSortingRepository<User
     void deleteByUserId(Long userId);
 
     Page<UserHitResult> findByUserIdEquals(Long userId, Pageable pageable);
+
+    UserHitResult save(UserHitResult userHitResult);
 }

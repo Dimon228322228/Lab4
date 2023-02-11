@@ -1,15 +1,17 @@
 import React from "react";
 import Navbar from "./components/UI/navbar/Navbar.jsx";
 import "./styles/App.css"
-import MainContent from "./components/MainContent.jsx";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 
 function App() {
-
   return (
-    <div className="App">
-        <Navbar />
-        <MainContent/>
-    </div>
+      <BrowserRouter>
+        <div className="App">
+            <Navbar />
+            <AppRouter/>
+        </div>
+      </BrowserRouter>
   );
 }
 

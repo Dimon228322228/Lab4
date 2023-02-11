@@ -15,10 +15,10 @@ import java.time.ZonedDateTime;
 @Embeddable
 public class HitResult {
 
-    @Id
-    @Setter
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+//    @Id
+//    @Setter
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private Long id;
     @Embedded
     private Coordinate coords;
 
@@ -29,13 +29,13 @@ public class HitResult {
 
 
     public static HitResult fromHit(Coordinate coordinate, ShotResult shotResult) {
-        return new HitResult(null, coordinate, shotResult, ZonedDateTime.now());
+        return new HitResult(coordinate, shotResult, ZonedDateTime.now());
     }
 
     @Override
     public String toString() {
         return "HitResult{" +
-                "id=" + id +
+//                "id=" + id +
                 ", Coordinates=" + coords +
                 ", ShotResult=" + shot +
                 '}';

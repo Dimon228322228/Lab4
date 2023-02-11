@@ -15,12 +15,12 @@ import java.time.Instant;
 @Setter
 @Embeddable
 public class ShotResult {
-    private boolean res;
+    private boolean isHit;
     private String message;
     private Duration executionTime;
 
-    public static ShotResult create(boolean res, String message, Instant startTime) {
-        return new ShotResult(res,message,getDiff(startTime));
+    public static ShotResult create(boolean isHit, String message, Instant startTime) {
+        return new ShotResult(isHit,message,getDiff(startTime));
     }
 
     private static Duration getDiff(Instant start) {
@@ -31,7 +31,7 @@ public class ShotResult {
     @Override
     public String toString() {
         return "ShotResult{" +
-                ", res=" + res +
+                ", isHit=" + isHit +
                 ", message='" + message + '\'' +
                 ", executionTime=" + executionTime +
                 '}';

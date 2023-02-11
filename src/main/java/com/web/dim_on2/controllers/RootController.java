@@ -9,5 +9,4 @@ public class RootController {
     public String hello(){
         return "index.html";
     }
-
 }
