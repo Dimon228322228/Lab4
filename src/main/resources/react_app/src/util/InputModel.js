@@ -5,7 +5,7 @@ import {addElementsAction, updateTableAction} from "../store/TableReducer";
 export class InputModel{
     constructor( ) {
         this._table = store.getState().tableReducer.table;
-        this._r = store.getState().rReducer.radius;
+        this._r = store.getState().chooser.radius;
     }
 
     get table() {

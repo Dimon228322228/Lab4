@@ -1,14 +1,13 @@
-import {createStore, combineReducers} from "redux";
-import {radiusReducer} from "./RadiusReducer";
-import {XReducer} from "./XReducer";
-import {YReducer} from "./YReducer";
-import {composeWithDevTools} from "redux-devtools-extension";
-import {TableReducer} from "./TableReducer";
+import chooserReducer from "./chooserSlice"
+import paginationReducer from "./paginationSlice"
+import {configureStore} from "@reduxjs/toolkit";
+import {api} from "../services/api";
 
-const rootReducer = combineReducers({
-   xReducer: XReducer,
-   yReducer: YReducer,
-   rReducer: radiusReducer,
-   tableReducer: TableReducer
+export const store = configureStore({
+   reducer: {
+      [api.reduserPath]: api.reduser,
+      chooser: chooserReducer,
+      pagination: paginationReducer,
+   },
+   middleware: (gDM) => gDM().concat(api.middleware)
 });
-export const store = createStore(rootReducer, composeWithDevTools());

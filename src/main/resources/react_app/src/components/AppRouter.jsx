@@ -7,15 +7,9 @@ import Login from "./Login.jsx";
 const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/login">
-                <Login/>
-            </Route>
-            <Route path={"/"}>
-                <MainContent/>
-            </Route>
-            <Route path="*" element={
-                <Error/>
-            }/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path={"/"} element={<MainContent/>}/>
+            <Route path="*" element={<Error/>}/>
         </Routes>
     );
 };

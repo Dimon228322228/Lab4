@@ -13,5 +13,5 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 public class UserDataDto implements Dto<UserData> {
-    private List<UserHitResult> attempts;
+    private List<UserHitResult> hitResults;
 }

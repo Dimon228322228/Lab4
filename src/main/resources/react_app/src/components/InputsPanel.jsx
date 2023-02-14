@@ -1,30 +1,23 @@
 import React from 'react';
 import classes from "./MainContent.module.css";
-import {useDispatch, useSelector} from "react-redux";
-import {updateRAction} from "../store/RadiusReducer";
-import {updateXAction} from "../store/XReducer";
-import {updateYAction} from "../store/YReducer";
+import {setR, setX, setY} from "../store/chooserSlice";
+import TextChooser from "./UI/choosers/textChooser";
+import ChooserWrapper from "./UI/choosers/ChooserWrapper";
+import SliderChooser from "./UI/choosers/SliderChooser";
 
 const InputsPanel = () => {
-    const dispatch = useDispatch();
-    const radius = useSelector(state => state.rReducer.radius);
-
-    const changeR = e => dispatch(updateRAction(e.target.value));
-    const changeY = e => dispatch(updateYAction(e.target.value));
-    const changeX = e => dispatch(updateXAction(e.target.value));
 
     return (
         <form className={classes.flexColumn}>
-            <input onChange={changeX} className={[classes.textBlue20, classes.input, classes.scalableItem].join(" ")} type={"text"} placeholder={"Введите x: "}/>
-            <input onChange={changeY} className={[classes.textBlue20, classes.input, classes.scalableItem].join(" ")} type={"text"} placeholder={"Введите y: "}/>
-            <div className={[classes.scalableItem, classes.flexColumn].join(" ")}>
-                <label className={[classes.textBlue20, classes.paddingLeft20].join(" ")} htmlFor={"radius"}>Выберите r:</label>
-                <input onChange={e => changeR(e)} id={"radius"} className={[classes.input].join(" ")} type={"range"} min={'1'} max={'5'} step={"0.01"} value={radius}/>
-                <div className={[classes.flexRow, classes.spaceBetween, classes.textBlue20].join(" ")}>
-                    <p>1</p>
-                    <p>5</p>
-                </div>
-            </div>
+            <ChooserWrapper chooserName={"Введите x:"}>
+                <TextChooser getValue={state => state.chooser.x} setValue={setX} minValue={-5} maxValue={5} />
+            </ChooserWrapper>
+            <ChooserWrapper chooserName={"Введите x:"}>
+                <TextChooser getValue={state => state.chooser.y} setValue={setY} minValue={-5} maxValue={5} />
+            </ChooserWrapper>
+            <ChooserWrapper chooserName={"Выберите r:"}>
+                <SliderChooser getValue={state => state.chooser.r} setValue={setR} minValue={-5} maxValue={5} />
+            </ChooserWrapper>
         </form>
     );
 };
